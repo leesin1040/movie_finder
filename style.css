@@ -84,6 +84,10 @@ nav {
   right: 0;
 }
 
+/* Flex 데이터 넣고 나서 다시 손대세요~*/
+.container {
+  flex-wrap: wrap;
+}
 /* 카드 */
 .card {
   background-color: #ddbea9;
@@ -97,6 +101,7 @@ nav {
   background-color: #cb997e;
   transition: 0.5s;
   color: #ffff;
+  cursor: pointer;
 }
 .card-img-top {
   width: 16em;
