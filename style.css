@@ -88,6 +88,8 @@ nav {
 .container {
   flex-wrap: wrap;
 }
+/* 참조 https://studiomeal.com/archives/197 */
+
 /* 카드 */
 .card {
   background-color: #ddbea9;
