@@ -13,17 +13,19 @@ body {
 }
 /* 상단 네비게이션바_로고 */
 .logoimg {
-  width: 7em;
-  height: 3em;
+  width: 8em;
+  height: 4em;
   position: relative;
-  top: 1em;
+  top: 1.5em;
   margin-left: 1em;
 }
 
 .searchbar {
-  align-content: center;
+  position: relative;
+  top: -1em;
 }
 
+/* 검색 입력창 */
 input[type='text'] {
   background-color: rgb(233, 233, 233);
   width: 60%;
@@ -34,6 +36,7 @@ input[type='text'] {
   border-radius: 15px;
 }
 
+/* 검색버튼 */
 .searchbtn {
   border: 0;
   outline: none;
@@ -67,21 +70,17 @@ input[type='text'] {
   font-size: 1.5em;
   margin: 0.2em;
 }
-
 .stars {
   font-size: 1.2em;
-
   margin: 0.2em;
   text-align: center;
 }
-
 .starscolor {
   color: #f95738;
   font-size: 1.2em;
   position: relative;
   bottom: -0.08em;
 }
-
 .overview {
   font-size: 0.9em;
   margin: 0.2em 0.2em 0.2em 1.5em;
@@ -89,7 +88,7 @@ input[type='text'] {
   overflow-y: scroll;
 }
 
-/* 스크롤바 꾸미기 */
+/* 카드 속 스크롤바 꾸미기 */
 .overview::-webkit-scrollbar {
   background-color: rgb(255, 255, 255, 0.1);
   width: 5px;
