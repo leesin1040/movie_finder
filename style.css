@@ -48,6 +48,15 @@ input[type='text'] {
   margin-left: 1em;
 }
 
+/* 상단 위치고정 */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
 /* 카드 */
 .card {
   background-color: #faf0ca;
