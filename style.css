@@ -13,17 +13,17 @@ body {
 }
 /* 상단 네비게이션바_로고 */
 .logoimg {
-  width: 8em;
-  height: 4em;
+  width: 9em;
+  height: 4.5em;
   position: relative;
-  top: 1.5em;
+  top: 1.7em;
   margin-left: 1em;
 }
 
 /* 인풋, 버튼 위치지정용 */
 .searchbar {
   position: relative;
-  top: -1em;
+  top: -1.6em;
 }
 
 /* 네비게이션바 고정했는데 뒤에 공간이 남아서 만든 거 */
@@ -43,6 +43,7 @@ input[type='text'] {
   outline: none;
   border-radius: 15px;
 }
+/* 검색하고 있을때 아웃라인 */
 input[type='text']:focus {
   outline-color: #ee964b;
   outline-style: solid;
@@ -63,16 +64,18 @@ input[type='text']:focus {
   letter-spacing: 4;
   color: #0d3b66;
 }
+/* 검색버튼 호버 컬러변경, 마우스 모양 바꾸기*/
 .searchbtn:hover {
   background-color: #f95738;
   transition: 0.5s;
   cursor: pointer;
 }
+/* 검색버튼 누르면 컬러변경 */
 .searchbtn:active {
   background-color: #ee964b;
 }
 
-/* 상단 위치고정 */
+/* 네비게이션바 상단 위치고정 */
 nav {
   position: fixed;
   top: 0;
@@ -83,7 +86,7 @@ nav {
 
 /* 카드 */
 .card {
-  background-color: #faf0ca;
+  background-color: #ddbea9;
   width: 18em;
   border-radius: 15px;
   margin: 1em;
@@ -119,16 +122,16 @@ nav {
   margin: 0.2em 0.5em 0.2em 1em;
   height: 3em;
   overflow-y: scroll;
+  padding-right: 0.5em;
 }
 
 /* 카드 속 스크롤바 꾸미기 */
 .overview::-webkit-scrollbar {
   background-color: rgb(255, 255, 255, 0.1);
   width: 5px;
-  border: 2px #faf0ca solid;
 }
 
 .overview::-webkit-scrollbar-thumb {
-  background-color: rgb(238, 150, 75, 0.5);
+  background-color: rgb(255, 232, 214, 0.5);
   border-radius: 10px;
 }
