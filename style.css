@@ -36,12 +36,12 @@ body {
 /* 검색 입력창 */
 input[type='text'] {
   background-color: rgb(233, 233, 233);
-  width: 60%;
+  width: 75%;
   height: 50%;
   font-size: 1.2em;
   border: 0;
   outline: none;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 /* 검색하고 있을때 아웃라인 */
 input[type='text']:focus {
@@ -55,7 +55,7 @@ input[type='text']:focus {
 .searchbtn {
   border: 0;
   outline: none;
-  border-radius: 15px;
+  border-radius: 20px;
   width: 10%;
   height: 51%;
   font-size: 1.3em;
@@ -69,6 +69,10 @@ input[type='text']:focus {
   background-color: #f95738;
   transition: 0.5s;
   cursor: pointer;
+  outline-color: #f95738;
+  outline-style: solid;
+  box-shadow: 0 0 0 2px #f95738;
+  transition: 0.5s;
 }
 /* 검색버튼 누르면 컬러변경 */
 .searchbtn:active {
@@ -145,6 +149,6 @@ nav {
 }
 
 .overview::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 232, 214, 0.5);
+  background-color: rgb(255, 255, 255, 0.3);
   border-radius: 10px;
 }
