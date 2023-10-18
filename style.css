@@ -1,0 +1,101 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Orbit&display=swap');
+
+body {
+  font-family: 'Orbit', sans-serif;
+  letter-spacing: -2;
+  text-align: justify;
+}
+/* 상단 네비게이션바 */
+.navigationbar {
+  background-color: #0d3b66;
+  height: 5em;
+}
+/* 상단 네비게이션바_로고 */
+.logoimg {
+  width: 7em;
+  height: 3em;
+  position: relative;
+  top: 1em;
+  margin-left: 1em;
+}
+
+.searchbar {
+  align-content: center;
+}
+
+input[type='text'] {
+  background-color: rgb(233, 233, 233);
+  width: 60%;
+  height: 50%;
+  font-size: 1.2em;
+  border: 0;
+  outline: none;
+  border-radius: 15px;
+}
+
+.searchbtn {
+  border: 0;
+  outline: none;
+  border-radius: 15px;
+  width: 10%;
+  height: 50%;
+  font-size: 1.3em;
+  background-color: #f4d35e;
+  margin-left: 1em;
+}
+
+/* 카드 */
+.card {
+  background-color: #faf0ca;
+  width: 18em;
+  border-radius: 3%;
+  margin: 1em;
+  padding: 0.2em;
+  padding-bottom: 1em;
+}
+.card-img-top {
+  width: 16em;
+  overflow: auto;
+  margin-left: 1em;
+  margin-top: 1em;
+  border-radius: 3%;
+}
+.card-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 0.2em;
+}
+
+.stars {
+  font-size: 1.2em;
+
+  margin: 0.2em;
+  text-align: center;
+}
+
+.starscolor {
+  color: #f95738;
+  font-size: 1.2em;
+  position: relative;
+  bottom: -0.08em;
+}
+
+.overview {
+  font-size: 0.9em;
+  margin: 0.2em 0.2em 0.2em 1.5em;
+  height: 3em;
+  overflow-y: scroll;
+}
+
+/* 스크롤바 꾸미기 */
+.overview::-webkit-scrollbar {
+  background-color: rgb(255, 255, 255, 0.1);
+  width: 5px;
+}
+
+.overview::-webkit-scrollbar-thumb {
+  background-color: rgb(238, 150, 75, 1);
+  border-radius: 10px;
+}
