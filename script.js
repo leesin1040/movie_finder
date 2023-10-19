@@ -14,25 +14,54 @@ fetch(
   .then((response) => response.json())
   .then((response) => {
     let movies = response['results'];
-    let movieCardpPost = document.getElementById('movieCards');
+    // let movieCardpPost = document.getElementById('movieCards');
 
     movies.forEach((a) => {
-      let movieId = a['id'];
-      let movieTitle = a['title'];
-      let movieOverview = a['overview'];
-      let movieAverage = a['vote_average'];
-      let moviePoster = a['poster_path'];
-
-      let movieCard = document.createElement('div');
-      movieCard.classList.add('movie-card');
-
-      movieCard.innerHTML = `
-      <div class="card">
-        <img src="https://image.tmdb.org/t/p/w200/${moviePoster}" class="card-img-top" alt="..."/>
-        <p class="card-title"> ${movieTitle} </p>
-        <p class="stars">평점 <span class="starscolor">${movieAverage}</span></p>
-        <p class="overview">${movieOverview}</p>
-      </div>`;
-      movieCardpPost.appendChild(movieCard);
+      createMovieCard(a);
+      // let movieId = a['id'];
+      // let movieTitle = a['title'];
+      // let movieOverview = a['overview'];
+      // let movieAverage = a['vote_average'];
+      // let moviePoster = a['poster_path'];
+      // let movieCard = document.createElement('div');
+      // movieCard.classList.add('movie-card');
+      // movieCard.innerHTML = `
+      // <div class="card">
+      //   <img src="https://image.tmdb.org/t/p/w200/${moviePoster}" class="card-img-top" alt="..."/>
+      //   <p class="card-title"> ${movieTitle} </p>
+      //   <p class="stars">평점 <span class="starscolor">${movieAverage}</span></p>
+      //   <p class="overview">${movieOverview}</p>
+      // </div>`;
+      // movieCardpPost.appendChild(movieCard);
+      // movieCard.addEventListener('click', () => {
+      //   const id = movieId;
+      //   alert('영화ID는 ' + id + ' 입니다.');
+      // });
     });
   });
+
+function createMovieCard(a) {
+  let movieCardpPost = document.getElementById('movieCards');
+  let movieId = a['id'];
+  let movieTitle = a['title'];
+  let movieOverview = a['overview'];
+  let movieAverage = a['vote_average'];
+  let moviePoster = a['poster_path'];
+
+  let movieCard = document.createElement('div');
+  movieCard.classList.add('movie-card');
+
+  movieCard.innerHTML = `
+    <div class="card">
+      <img src="https://image.tmdb.org/t/p/w200/${moviePoster}" class="card-img-top" alt="..."/>
+      <p class="card-title"> ${movieTitle} </p>
+      <p class="stars">평점 <span class="starscolor">${movieAverage}</span></p>
+      <p class="overview">${movieOverview}</p>
+    </div>`;
+  movieCardpPost.appendChild(movieCard);
+
+  movieCard.addEventListener('click', () => {
+    const id = movieId;
+    alert('영화ID는 ' + id + ' 입니다.');
+  });
+}
