@@ -15,20 +15,22 @@ body {
 .logoimg {
   width: 9em;
   height: 4.5em;
-  position: relative;
   top: 1.7em;
   margin-left: 1em;
 }
 
 /* 인풋, 버튼 위치지정용 */
 .searchbar {
-  position: relative;
-  top: -1.6em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 
 /* 네비게이션바 고정했는데 뒤에 공간이 남아서 만든 거 */
 .top_bar {
-  height: 2em;
+  height: 4em;
   background-color: #ffff;
   color: #f4d35e;
 }
@@ -56,13 +58,11 @@ input[type='text']:focus {
   border: 0;
   outline: none;
   border-radius: 20px;
-  width: 10%;
-  height: 51%;
   font-size: 1.3em;
   background-color: #f4d35e;
   margin-left: 1em;
-  letter-spacing: 4;
   color: #0d3b66;
+  padding: 1rem 3rem 1rem 3rem;
 }
 /* 검색버튼 호버 컬러변경, 마우스 모양 바꾸기*/
 .searchbtn:hover {
@@ -94,10 +94,15 @@ nav {
 }
 /* 참조 https://studiomeal.com/archives/197 */
 
+#movieCards {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 /* 카드 */
 .card {
   background-color: #ddbea9;
-  width: 18em;
+  width: 17em;
   border-radius: 15px;
   margin: 1em;
   padding: 0.2em;
@@ -110,17 +115,23 @@ nav {
   cursor: pointer;
 }
 .card-img-top {
-  width: 16em;
+  width: 15em;
+  height: 22em;
   overflow: auto;
   margin-left: 1em;
   margin-top: 1em;
   border-radius: 15px;
+  border: 0;
 }
 .card-title {
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0.2em;
+  word-spacing: -4;
 }
 .stars {
   font-size: 1.2em;
@@ -139,7 +150,6 @@ nav {
   height: 4em;
   overflow-y: scroll;
   padding-right: 0.5em;
-  word-spacing: -4;
 }
 
 /* 카드 속 스크롤바 꾸미기 */
