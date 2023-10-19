@@ -58,7 +58,7 @@ function createMovieCard(a) {
     <div class="card">
       <img src="https://image.tmdb.org/t/p/w200/${moviePoster}" class="card-img-top" alt="..."/>
       <p id="cardtitle"> ${movieTitle} </p>
-      <p class="stars">평점 <span class="starscolor">${movieAverage}</span></p>
+      <p class="stars">Scores <span class="starscolor">${movieAverage}</span></p>
       <p class="overview">${movieOverview}</p>
     </div>`;
   movieCardpPost.appendChild(movieCard);
