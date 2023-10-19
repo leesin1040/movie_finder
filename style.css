@@ -1,8 +1,8 @@
 /* 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 body {
-  font-family: 'Orbit', sans-serif;
+  font-family: 'Merriweather', serif;
   letter-spacing: -2;
   text-align: justify;
 }
@@ -118,18 +118,20 @@ nav {
   border-radius: 15px;
   border: 0;
 }
-.card-title {
+
+#cardtitle {
   text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
-  font-size: 1.2em;
   margin: 0.2em;
   word-spacing: -4;
 }
 .stars {
-  font-size: 1.1em;
   margin: -0.2em 1em 0.2em 1em;
   text-align: center;
 }
@@ -145,6 +147,7 @@ nav {
   height: 4em;
   overflow-y: scroll;
   padding-right: 0.5em;
+  letter-spacing: -4;
 }
 
 /* 카드 속 스크롤바 꾸미기 */

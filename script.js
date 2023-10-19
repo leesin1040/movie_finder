@@ -17,7 +17,6 @@ fetch(
   .then((response) => {
     let movies = response['results'];
     // let movieCardpPost = document.getElementById('movieCards');
-
     topMovies = response['results'];
 
     movies.forEach((a) => {
