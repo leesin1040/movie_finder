@@ -136,10 +136,11 @@ nav {
   text-align: center;
 }
 .starscolor {
-  color: #f95738;
+  color: red;
   font-size: 1.1em;
   font-weight: 700;
   bottom: -0.08em;
+  text-shadow: 2px 2px 8px black;
 }
 .overview {
   font-size: 0.9em;
@@ -152,11 +153,21 @@ nav {
 
 /* 카드 속 스크롤바 꾸미기 */
 .overview::-webkit-scrollbar {
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255, 0.3);
   width: 5px;
 }
 
 .overview::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgb(243, 195, 185, 1);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar {
+  background-color: rgb(243, 195, 185, 1);
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(137, 67, 43, 0.5);
   border-radius: 10px;
 }
