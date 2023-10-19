@@ -39,11 +39,11 @@ body {
 input[type='text'] {
   background-color: rgb(233, 233, 233);
   width: 75%;
-  height: 50%;
   font-size: 1.2em;
   border: 0;
   outline: none;
   border-radius: 20px;
+  padding: 10px 10px 10px 20px;
 }
 /* 검색하고 있을때 아웃라인 */
 input[type='text']:focus {
@@ -62,7 +62,7 @@ input[type='text']:focus {
   background-color: #f4d35e;
   margin-left: 1em;
   color: #0d3b66;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 0.6rem 3rem 0.6rem 3rem;
 }
 /* 검색버튼 호버 컬러변경, 마우스 모양 바꾸기*/
 .searchbtn:hover {
@@ -88,12 +88,7 @@ nav {
   right: 0;
 }
 
-/* Flex 데이터 넣고 나서 다시 손대세요~*/
-.container {
-  flex-wrap: wrap;
-}
-/* 참조 https://studiomeal.com/archives/197 */
-
+/* 이것이...플렉스.... */
 #movieCards {
   flex-wrap: wrap;
   display: flex;
@@ -134,14 +129,14 @@ nav {
   word-spacing: -4;
 }
 .stars {
-  font-size: 1.2em;
-  margin: -0.2em 0.5em 0.2em 1em;
+  font-size: 1.1em;
+  margin: -0.2em 1em 0.2em 1em;
   text-align: center;
 }
 .starscolor {
   color: #f95738;
-  font-size: 1.2em;
-  position: relative;
+  font-size: 1.1em;
+  font-weight: 700;
   bottom: -0.08em;
 }
 .overview {
