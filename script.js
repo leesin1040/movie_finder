@@ -8,7 +8,7 @@ const options = {
 };
 
 fetch(
-  'https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1',
+  'https://api.themoviedb.org/3/movie/top_rated?language=en&page=1',
   options
 )
   .then((response) => response.json())
@@ -18,6 +18,7 @@ fetch(
 
     movies.forEach((a) => {
       createMovieCard(a);
+      //밑으로 이사 보냈습니다.
       // let movieId = a['id'];
       // let movieTitle = a['title'];
       // let movieOverview = a['overview'];
@@ -40,8 +41,8 @@ fetch(
     });
   });
 
+let movieCardpPost = document.getElementById('movieCards');
 function createMovieCard(a) {
-  let movieCardpPost = document.getElementById('movieCards');
   let movieId = a['id'];
   let movieTitle = a['title'];
   let movieOverview = a['overview'];
@@ -65,3 +66,11 @@ function createMovieCard(a) {
     alert('영화ID는 ' + id + ' 입니다.');
   });
 }
+// 검색
+const searchBtn = document.getElementById('searchyellow');
+const searchTxt = document.getElementById('searchinput');
+
+searchBtn.addEventListener('click', () => {
+  let text = searchTxt.value;
+  console.log(text);
+});
