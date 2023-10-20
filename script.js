@@ -24,6 +24,7 @@ fetch(
       createMovieCard(a);
     });
   });
+
 //▼HTML의 ID값 가져오기
 let movieCardpPost = document.getElementById('movieCards');
 
