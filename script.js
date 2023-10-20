@@ -22,18 +22,22 @@ fetch(
       createMovieCard(a);
     });
   });
-
+//HTML의 ID값 가져오기
 let movieCardpPost = document.getElementById('movieCards');
+
+//카드 만들기
 function createMovieCard(a) {
+  //필요한 변수에 response의 key값 할당
   let movieId = a['id'];
   let movieTitle = a['title'];
   let movieOverview = a['overview'];
   let movieAverage = a['vote_average'];
   let moviePoster = a['poster_path'];
 
+  //HTML에서 div요소 새로 만들고 Class 부여하기
   let movieCard = document.createElement('div');
   movieCard.classList.add('movie-card');
-
+  //movieCard가 만드는 div요소 내부에 HTML 넣기
   movieCard.innerHTML = `
     <div class="card">
       <img src="https://image.tmdb.org/t/p/w200/${moviePoster}" class="card-img-top" alt="..."/>
@@ -41,16 +45,19 @@ function createMovieCard(a) {
       <p class="stars">Scores <span class="starscolor">${movieAverage}</span></p>
       <p class="overview">${movieOverview}</p>
     </div>`;
+  //위에서 만들어진 movieCard들을 movieCardPost에 Child로 만들기
   movieCardpPost.appendChild(movieCard);
+  //영화 제목과 카드를 Map 키값으로 만들기 []
   movieMap.set(movieTitle, movieCard);
 
+  //만들어진 카드를 클릭하면 해당 영화의 ID값 가져오기
   movieCard.addEventListener('click', () => {
     const id = movieId;
     alert('영화ID는 ' + id + ' 입니다.');
   });
 }
 
-// 검색
+// 검색기능 구현을 위해 HTML의 Searchbar ID가져오기
 const searchBtn = document.getElementById('searchyellow');
 const searchTxt = document.getElementById('searchinput');
 
@@ -58,23 +65,26 @@ function search() {
   let text = searchTxt.value;
   topMovies.forEach((a) => {
     let movieTitle = a['title'];
+    //검색어를 모두 소문자 취급하고 카드와 매치
     if (movieTitle.toLowerCase().includes(text.toLowerCase())) {
-      //맞는 값
+      //검색한 텍스트가 포함된 카드는 보이게
       movieMap.get(movieTitle).style.display = 'block';
     } else {
+      //검색한 텍스트가 없는 카드는 안보이게
       movieMap.get(movieTitle).style.display = 'none';
     }
   });
 }
 
-//클릭, 검색
+//Search 버튼 클릭시 'search'함수 실행
 searchBtn.addEventListener('click', () => {
   search();
 });
-
-searchTxt.focus();
+//Search Input 작성 후 Enter 누르면 서치함수 작동
 searchTxt.addEventListener('keyup', function (event) {
   if (event.key === 'Enter') {
     search();
   }
 });
+//Search Input Focus상태
+searchTxt.focus();
