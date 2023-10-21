@@ -120,11 +120,10 @@ nav {
 }
 
 #cardtitle {
+  padding: 0 1em 0 1em;
   text-align: center;
   font-weight: 600;
   font-size: 1.2em;
-}
-.card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -140,7 +139,7 @@ nav {
   font-size: 1.1em;
   font-weight: 700;
   bottom: -0.08em;
-  text-shadow: 0 0 3px #FFFFFF;
+  text-shadow: 0 0 3px #ffffff;
 }
 .overview {
   font-size: 0.9em;
