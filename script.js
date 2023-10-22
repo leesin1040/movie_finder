@@ -16,10 +16,10 @@ fetch(
 )
   .then((response) => response.json())
   .then((response) => {
-    let movies = response['results'];
-    topMovies = response['results'];
+    let movies = response['results']; //가져온 json자료들을 movies에 할당
+    topMovies = response['results']; // map으로 할당
 
-    //▼불러온 results Array를 돌리면서 각각 카드 만들기
+    //▼불러온 results 배열들을 돌리면서 각각 카드 만들기
     movies.forEach((a) => {
       createMovieCard(a);
     });
@@ -30,7 +30,7 @@ let movieCardpPost = document.getElementById('movieCards');
 
 //▼카드 만들기
 function createMovieCard(a) {
-  //▼필요한 변수에 response의 key값 할당
+  //▼필요한 변수에 response의 key값 할당 (사실 안해도 상관없음)
   let movieId = a['id'];
   let movieTitle = a['title'];
   let movieOverview = a['overview'];
