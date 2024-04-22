@@ -4,7 +4,7 @@
 
 
 ## link
-- https://leesin1040.github.io/Movie/
+- https://leesin1040.github.io/movie_finder/
 
 
 ## Tach
